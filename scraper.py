@@ -29,7 +29,6 @@ def baixar_partidas_abertura(nome_abertura, callback_status=None):
         if callback_status:
             callback_status(msg)
         print(msg)
-
     pasta_atual = os.getcwd()
     prefs = {
         "download.default_directory": pasta_atual,
