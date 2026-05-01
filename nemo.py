@@ -23,5 +23,4 @@ def extrair_partidas_zst(caminho_entrada, caminho_saida, limite_partidas=10000):
 if __name__ == "__main__":
     ARQUIVO_ENTRADA = "arquivo.pgn.zst" 
     ARQUIVO_SAIDA = "primeiras_10000_partidas.pgn"
-    
     extrair_partidas_zst(ARQUIVO_ENTRADA, ARQUIVO_SAIDA, 100000)
