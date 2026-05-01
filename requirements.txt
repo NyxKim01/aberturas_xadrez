@@ -1,0 +1,5 @@
+selenium
+webdriver-manager
+PyQt5
+python-chess
+zstandard
