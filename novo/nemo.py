@@ -23,5 +23,4 @@ def extrair_partidas_zst(caminho_entrada, caminho_saida, limite_partidas=10000):
     print(f"🐠 [Nemo] Sucesso! {contador_partidas} partidas extraídas e salvas.")
 
 if __name__ == "__main__":
-    # Mantido para caso queira rodar sozinho
     extrair_partidas_zst("arquivo.pgn.zst", "primeiras_10000_partidas.pgn", 10000)
