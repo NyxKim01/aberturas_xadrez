@@ -5,7 +5,8 @@ import re
 def limpar_nome_pasta(nome):
     return re.sub(r'[\\/*?:"<>|]', "", nome).strip()
 
-def separar_pgn_por_abertura(caminho_pgn_entrada, diretorio_saida="aberturas_organizadas"):
+def separar_pgn_por_abertura(caminho_pgn_entrada, diretorio_saida):
+    print(f"⭐ [Estrela do Mar] Organizando partidas por abertura na pasta '{diretorio_saida}'...")
     if not os.path.exists(diretorio_saida):
         os.makedirs(diretorio_saida)
     try:
@@ -34,5 +35,4 @@ def separar_pgn_por_abertura(caminho_pgn_entrada, diretorio_saida="aberturas_org
         print(f"❌ Ocorreu um erro inesperado: {e}")
 
 if __name__ == "__main__":
-    arquivo_alvo = "primeiras_10000_partidas.pgn" 
-    separar_pgn_por_abertura(arquivo_alvo)
+    separar_pgn_por_abertura("primeiras_10000_partidas.pgn", "aberturas_organizadas")
