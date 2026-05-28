@@ -21,7 +21,7 @@ def carregar_amostra(diretorio_csv, n_por_arquivo=10000):
 
 df = carregar_amostra("C:/Users/tiago/Desktop/Xadrez/aberturas_xadrez/novo/aberturas_csv")
 
-# -> TRATAMENTO PARA VISUALIZAÇÃO
+# TRATAMENTO PARA VISUALIZAÇÃO
 
 # Criar coluna de Diferença de Rating
 df['rating_diff'] = df['w_rating'] - df['b_rating']
@@ -30,7 +30,7 @@ df['rating_diff'] = df['w_rating'] - df['b_rating']
 top_openings = df['opening'].value_counts().nlargest(20).index
 df_top = df[df['opening'].isin(top_openings)]
 
-# -> CÓDIGO DAS VISUALIZAÇÕES
+# CÓDIGO DAS VISUALIZAÇÕES
 
 plt.figure(figsize=(15, 10))
 
