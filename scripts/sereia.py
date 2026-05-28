@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout,
                              QPushButton, QLabel, QFileDialog, QSpinBox, QTextEdit, QCheckBox)
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
 import nemo
-import estrela_do__mar
+import estrela_do_mar
 import cavalo_marinho
 
 class RedirecionadorLog(object):
