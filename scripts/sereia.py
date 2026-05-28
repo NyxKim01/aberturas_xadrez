@@ -41,7 +41,7 @@ class TrabalhadorPipeline(QThread):
             self.usar_probabilidade
         )
         self.sinal_log.emit("\n")
-        estrela_do__mar.separar_pgn_por_abertura(caminho_pgn_temporario, pasta_aberturas)
+        estrela_do_mar.separar_pgn_por_abertura(caminho_pgn_temporario, pasta_aberturas)
         self.sinal_log.emit("\n")
         cavalo_marinho.processar_para_csv(pasta_aberturas, pasta_csv_saida)
         self.sinal_log.emit("\n✨ Processo finalizado com sucesso! O oceano de dados está pronto.")
