@@ -98,4 +98,4 @@ aberturas/
 Assim como o oceano, o xadrez guarda padrões profundos esperando para serem descobertos.  
 Este projeto transforma caos em estrutura — um verdadeiro mapa do fundo do mar das aberturas.
 
-Boa exploração, capitão. 🐙🐙
+Boa exploração, capitão. 🐙🐙🐙
