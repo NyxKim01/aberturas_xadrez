@@ -99,7 +99,6 @@
     <script>
         let board = null;
         let currentOpening = "";
-        
         // Aberturas rigorosamente no lance 10 (após o 10º lance das pretas, Brancas jogam o 11º)
         const openings = [
             { name: "King's Indian Defense (Mar del Plata)", fen: "r1bq1rk1/pppnn1bp/3p2p1/3Ppp2/2P1P3/2NN4/PP2BPPP/R1BQ1RK1 w - - 0 11" },
@@ -134,14 +133,13 @@
             { name: "Bogo-Indian Defense", fen: "rnb2rk1/ppp1qppp/3p1n2/3Pp3/2P1P3/5NP1/PP1N1PBP/R2Q1RK1 w - - 1 11" },
             { name: "Evans Gambit", fen: "r1b1k2r/pppqnppp/1b1p4/n3P3/1QB1P3/2P2N2/P4PPP/RNB2RK1 w kq - 3 11" }
         ];
-
         function applyOceanTheme() {
             $('#board .square-55d63').each(function() {
                 const classes = $(this).attr('class');
                 if (/black-/.test(classes)) {
-                    $(this).css('background-color', '#7ec8e3'); // azul cristalino
+                    $(this).css('background-color', '#7ec8e3');
                 } else if (/white-/.test(classes)) {
-                    $(this).css('background-color', '#ffffff'); // branco espuma
+                    $(this).css('background-color', '#ffffff'); 
                 }
             });
         }
