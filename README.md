@@ -13,7 +13,6 @@
 - Dois níveis de análise:
   - **Maré Neural**: estimativa local imediata, baseada em material, centro, desenvolvimento e segurança do rei.
   - **Stockfish 18 leve**: carregado sob demanda pelo botão da interface; a avaliação UCI substitui a estimativa local quando disponível.
-- “Árvore de coral” com a sequência que o usuário criou e indicação de uma próxima corrente conhecida.
 - Atlas de estudo com 16 aberturas, linhas clicáveis, comparativo de resultados e gráfico de mudança da expectativa ao longo dos lances.
 - Visual inteiramente novo: oceano escuro, corais, bolhas, tipografia arredondada e componentes responsivos.
 
