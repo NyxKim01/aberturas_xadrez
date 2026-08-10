@@ -1,3 +1,0 @@
-python-chess
-zstandard
-python-dotenv
