@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F4F2EE" />
+    <meta name="description" content="Maré de Aberturas — explore posições, aberturas e probabilidades de xadrez." />
+    <title>Maré de Aberturas · laboratório de xadrez</title>
+    <link rel="stylesheet" href="assets/css/theme.css" />
+  </head>
+  <body>
+    <header class="site-header shell">
+      <a class="brand" href="index.html" aria-label="Maré de Aberturas, página inicial">
+        <span class="brand-mark" aria-hidden="true">♘</span>
+        <span>Kraken</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a class="is-active" href="index.html">Explorar</a>
+        <a href="estudos.html">Estudar aberturas</a>
+      </nav>
+    </header>
+
+    <main class="shell app-page">
+      <section class="intro-row" aria-labelledby="page-title">
+        <div>
+          <h1 id="page-title">Mova uma peça<br /><em>Leia a maré</em></h1>
+        </div>
+      </section>
+
+      <section class="playground" aria-label="Tabuleiro e análise em tempo real">
+        <aside class="left-rail structural-panel">
+          <div class="rail-heading">
+            <span class="section-kicker">seu mergulho</span>
+            <h2>Controle de rota</h2>
+          </div>
+
+          <div class="turn-card">
+            <div class="turn-orb" id="turn-orb">♙</div>
+            <div>
+              <span id="turn-label">Vez das peças claras</span>
+              <strong id="turn-detail">Brancas para jogar</strong>
+            </div>
+          </div>
+
+          <div class="control-stack" aria-label="Controles do tabuleiro">
+            <button class="soft-button primary-button" id="new-game-button" type="button">
+              Recomeçar a corrente
+            </button>
+            <div class="two-buttons">
+              <button class="soft-button" id="undo-button" type="button">Voltar</button>
+              <button class="soft-button" id="flip-button" type="button">Virar</button>
+            </div>
+          </div>
+
+          <div class="engine-card">
+            <strong id="engine-name">Maré Neural</strong>
+            <p id="engine-message">Estimativa local pronta para qualquer posição.</p>
+            <button class="text-button" id="engine-button" type="button">Ativar Stockfish profundo <span>→</span></button>
+          </div>
+
+          <div class="moves-log-wrap">
+            <div class="mini-title-row">
+              <span class="section-kicker">diário de bordo</span>
+              <span id="move-count">0 lances</span>
+            </div>
+            <ol class="moves-log" id="moves-log" aria-live="polite">
+            </ol>
+          </div>
+        </aside>
+
+        <section class="board-column" aria-label="Tabuleiro de xadrez">
+          <div class="board-topline">
+            <div><span class="section-kicker">posição viva</span><strong id="position-label">Posição inicial</strong></div>
+            <span class="position-badge" id="position-badge">equilibrada</span>
+          </div>
+          <div class="board-frame">
+            <div class="board-shell" id="board" role="grid" aria-label="Tabuleiro de xadrez interativo"></div>
+          </div>
+        </section>
+
+        <aside class="analysis-rail structural-panel">
+          <div class="opening-card" id="opening-card">
+            <div class="opening-card-top">
+              <span class="section-kicker">corrente identificada</span>
+            </div>
+            <p class="opening-eco" id="opening-eco">posição livre</p>
+            <h2 id="opening-name">Mar aberto</h2>
+            <p id="opening-description">Ainda não há uma abertura catalogada nesta rota.</p>
+            <a class="study-link" id="opening-link" href="estudos.html">Ver mapa de aberturas <span>→</span></a>
+          </div>
+
+          <section class="odds-card" aria-labelledby="odds-title">
+            <div class="card-title-row">
+              <div>
+                <span class="section-kicker">previsão da maré</span>
+                <h2 id="odds-title">Chances nesta posição</h2>
+              </div>
+            </div>
+            <div class="probability-track" aria-label="Probabilidade de resultado">
+              <span class="prob-white" id="prob-white-bar"></span>
+              <span class="prob-draw" id="prob-draw-bar"></span>
+              <span class="prob-black" id="prob-black-bar"></span>
+            </div>
+            <div class="probability-values">
+              <div><strong id="white-probability">33%</strong><small>claras</small></div>
+              <div><strong id="draw-probability">34%</strong><small>empate</small></div>
+              <div><strong id="black-probability">33%</strong><small>escuras</small></div>
+            </div>
+            <div class="evaluation-line"><span>inclinação</span><strong id="evaluation-score">0.00</strong></div>
+          </section>
+
+        </aside>
+      </section>
+    </main>
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>

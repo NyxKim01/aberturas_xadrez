@@ -1,0 +1,11 @@
+{
+  "name": "mare-de-aberturas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Laboratório estático de aberturas de xadrez com tema submarino.",
+  "scripts": {
+    "check": "node --check assets/js/app.js && node --check assets/js/study.js && node --check assets/js/core/chess-game.js && node --check assets/js/core/position-evaluator.js",
+    "serve": "node scripts/serve.mjs"
+  }
+}

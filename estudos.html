@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F4F2EE" />
+    <meta name="description" content="Estude as correntes, linhas e probabilidades das aberturas de xadrez." />
+    <title>Estudar aberturas · Maré de Aberturas</title>
+    <link rel="stylesheet" href="assets/css/theme.css" />
+  </head>
+  <body class="study-page">
+    <header class="site-header shell">
+      <a class="brand" href="index.html" aria-label="Maré de Aberturas, página inicial">
+        <span class="brand-mark" aria-hidden="true">♘</span>
+        <span>Kraken</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="index.html">Explorar</a>
+        <a class="is-active" href="estudos.html">Estudar aberturas</a>
+      </nav>
+    </header>
+
+    <main class="shell study-layout">
+      <section class="study-hero" aria-labelledby="study-title">
+        <div>
+          <h1 id="study-title">Descubra onde<br /><em>a maré favorece você.</em></h1>
+        </div>
+        <div class="hero-stat-group" aria-label="Resumo do atlas">
+          <div><strong id="opening-total">16</strong><span>aberturas no atlas</span></div>
+          <div><strong>3</strong><span>resultados por rota</span></div>
+          <div><strong>∞</strong><span>posições no tabuleiro</span></div>
+        </div>
+      </section>
+
+      <section class="atlas-guide">
+        <label class="search-shell">
+          <input id="opening-search" type="search" placeholder="Buscar abertura" autocomplete="off" />
+        </label>
+        <div class="filter-pills" id="family-filters" aria-label="Filtrar famílias de abertura"></div>
+      </section>
+
+      <section class="atlas-content" aria-label="Catálogo e detalhes de aberturas">
+        <div class="opening-list-wrap">
+          <div class="list-heading">
+            <div>
+              <span class="section-kicker">catálogo de recifes</span>
+              <h2>Qual rota quer estudar?</h2>
+            </div>
+            <span id="result-count">16 rotas</span>
+          </div>
+          <div class="opening-list" id="opening-list"></div>
+        </div>
+
+        <aside class="study-detail structural-panel" id="study-detail" aria-live="polite">
+          <div class="detail-topline">
+            <span class="opening-eco" id="detail-eco">C60</span>
+            <span class="detail-family" id="detail-family">Jogo aberto</span>
+          </div>
+          <h2 id="detail-name">Ruy Lopez</h2>
+          <p class="detail-description" id="detail-description"></p>
+          <div class="detail-moves" id="detail-moves"></div>
+
+          <section class="detail-probabilities" aria-labelledby="detail-probs-title">
+            <div class="card-title-row compact">
+              <div>
+                <span class="section-kicker">maré de referência</span>
+                <h3 id="detail-probs-title">Resultados da abertura</h3>
+              </div>
+            </div>
+            <div class="probability-track detail-track">
+              <span class="prob-white" id="detail-white-bar"></span>
+              <span class="prob-draw" id="detail-draw-bar"></span>
+              <span class="prob-black" id="detail-black-bar"></span>
+            </div>
+            <div class="probability-values compact-values">
+              <div><strong id="detail-white">0%</strong><small>claras</small></div>
+              <div><strong id="detail-draw">0%</strong><small>empate</small></div>
+              <div><strong id="detail-black">0%</strong><small>escuras</small></div>
+            </div>
+          </section>
+
+          <section class="line-chart-block" aria-labelledby="chart-title">
+            <div class="card-title-row compact">
+              <div>
+                <span class="section-kicker">a maré por lance</span>
+                <h3 id="chart-title">Vantagem das claras</h3>
+              </div>
+            </div>
+            <svg id="probability-chart" viewBox="0 0 520 170" role="img" aria-label="Gráfico da probabilidade de vitória das claras"></svg>
+          </section>
+
+          <section class="variation-section" aria-labelledby="variation-title">
+            <div class="card-title-row compact">
+              <div>
+                <span class="section-kicker">ramificações</span>
+                <h3 id="variation-title">Linhas para explorar</h3>
+              </div>
+            </div>
+            <div class="variation-list" id="variation-list"></div>
+          </section>
+          
+          <a class="detail-board-link" id="detail-board-link" href="index.html">Experimentar no tabuleiro <span>→</span></a>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="assets/js/study.js"></script>
+  </body>
+</html>
